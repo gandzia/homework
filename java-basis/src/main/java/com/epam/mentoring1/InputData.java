@@ -1,33 +1,53 @@
 package com.epam.mentoring1;
 
 import org.testng.Assert;
-
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class InputData {
-//    public static double a, b, c;
 
-    public static List<Double> inputData (){
-        double a, b, c;
-        Scanner reader = new Scanner(System.in);
-        System.out.print("Enter number a: ");
-        a = reader.nextDouble();
+    double a;
+    double b;
+    double c;
 
-        System.out.print("Enter number b: ");
-        b = reader.nextDouble();
+    private void setA(double a) {
+        this.a = a;
+    }
 
-        System.out.print("Enter number c: ");
-        c = reader.nextDouble();
-        System.out.println();
-        reader.close();
+    private void setB(double b) {
+        this.b = b;
+    }
 
-        List<Double> enteredValues = new ArrayList<Double>();
-        enteredValues.add(a);
-        enteredValues.add(b);
-        enteredValues.add(c);
+    private void setC(double c) {
+        this.c = c;
+    }
 
-        return enteredValues;
+    private double getA() {
+        return a;
+    }
+
+    private double getB() {
+        return b;
+    }
+
+    private double getC() {
+        return c;
+    }
+
+    public InputData(double a, double b, double c) {
+//        Scanner reader = new Scanner(System.in);
+//        System.out.print("Enter number a: ");
+//        setA(reader.nextDouble());
+//
+//        System.out.print("Enter number b: ");
+//        setB(reader.nextDouble());
+//
+//        System.out.print("Enter number c: ");
+//        setC(reader.nextDouble());
+//        System.out.println();
+//        reader.close();
+        setA(a);
+        setB(b);
+        setC(c);
+
     }
 }

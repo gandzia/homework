@@ -1,30 +1,59 @@
 package com.epam.mentoring1;
 
-        import org.testng.Assert;
-
-        import java.util.ArrayList;
-        import java.util.List;
-
-        import static com.epam.mentoring1.InputData.inputData;
-
 public class EQSolver {
-    public static List<Double> calculate(double a, double b, double c) {
 
-        Assert.assertFalse(a == 0, "Value of divider is 0!");
-        Assert.assertFalse((b*b-4*a*c) < 0, "Value under square root is negative!");
+    private double x1;
+    private double x2;
+    String message;
 
-        double x1, x2;
-        x1 = (-b + Math.sqrt(b*b-4*a*c))/(2*a);
-        x2 = (-b - Math.sqrt(b*b-4*a*c))/(2*a);
-        System.out.println("x1 = " + x1);
-        System.out.println("x2 = " + x2);
-
-        List<Double> calculatedValues = new ArrayList<Double>();
-        calculatedValues.add(x1);
-        calculatedValues.add(x2);
-
-        return calculatedValues;
+    private double getX1() {
+        return x1;
     }
 
+    private void setX1(double x1) {
+        this.x1 = x1;
+    }
+
+    private double getX2() {
+        return x2;
+    }
+
+    private void setX2(double x2) {
+        this.x2 = x2;
+    }
+
+    private void setMessage(String message) {
+        this.message = message;
+    }
+
+    private String getMessage() {
+        return message;
+    }
+
+    private EQSolver() {
+        setX1(x1);
+        setX2(x2);
+        setMessage(message);
+    }
+
+    public void calculate(double a, double b, double c) {
+
+        if (a == 0) {
+            message = "Value of divider is 0!";
+        } else {
+            double radicand = b * b - 4 * a * c;
+            if (radicand < 0) {
+                message = "Value under square root is negative!";
+            } else {
+                x1 = (-b + Math.sqrt(radicand)) / (2 * a);
+                x2 = (-b - Math.sqrt(radicand)) / (2 * a);
+
+                message = "x1 and x2 are calculated";
+                System.out.println("x1 = " + x1);
+                System.out.println("x2 = " + x2);
+            }
+        }
+
+    }
 }
 
