@@ -14,9 +14,9 @@ public abstract class AbstractSort {
     public abstract void sort();
 
     public static void printArray(int[] arr, String text) {
-        System.out.println("Array " + text + " sorting: ");
+        System.out.println("Array " + text + ": ");
         for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
+            System.out.print(arr[i] + "   ");
         }
         System.out.println();
     }
