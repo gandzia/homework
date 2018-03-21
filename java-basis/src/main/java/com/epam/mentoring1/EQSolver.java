@@ -30,7 +30,7 @@ public class EQSolver {
         return message;
     }
 
-    private EQSolver() {
+    public EQSolver() {
         setX1(x1);
         setX2(x2);
         setMessage(message);
