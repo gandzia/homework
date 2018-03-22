@@ -1,4 +1,4 @@
-package com.epam.mentoring2;
+package com.epam.module3;
 
 import java.util.Scanner;
 

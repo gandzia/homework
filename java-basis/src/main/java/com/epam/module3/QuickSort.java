@@ -1,4 +1,4 @@
-package com.epam.mentoring2;
+package com.epam.module3;
 
 public class QuickSort extends AbstractSort{
     public QuickSort(int[] input){
