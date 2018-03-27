@@ -25,7 +25,7 @@ public abstract class AbstractSort {
         System.out.println("Array in reverse order: ");
         int i = arr.length - 1;
         while (i >= 0){
-            System.out.print(arr[i] + " ");
+            System.out.print(arr[i] + "   ");
             i--;
         }
         System.out.println();
