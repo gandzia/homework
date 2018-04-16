@@ -8,7 +8,7 @@ public class BubbleSort extends AbstractSort{
     @Override
     public void sort(){
         int tmp;
-        for (int i = arrayFromAbstract.length - 1; i >= 2; i--) {
+        for (int i = arrayFromAbstract.length - 1; i >= 0; i--) {
             for (int j = 0; j < i; j++) {
                 if (arrayFromAbstract[j] > arrayFromAbstract[j + 1]) {
                     tmp = arrayFromAbstract[j];
