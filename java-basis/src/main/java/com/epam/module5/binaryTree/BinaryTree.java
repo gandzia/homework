@@ -3,6 +3,7 @@ package com.epam.module5.binaryTree;
 public class BinaryTree {
 
     Node root;
+    boolean found = false;
 
     //if value is less then parent - it is placed as left child, if more - as right one
     public void addNode(int key) {
@@ -40,6 +41,16 @@ public class BinaryTree {
             System.out.print(focusNode);
             inOrderTraverseTree(focusNode.getRightChild());
         }
+    }
+
+    public boolean searchInOrder(Node focusNode, int value) {
+
+        if (focusNode != null) {
+            searchInOrder(focusNode.getLeftChild(), value);
+            if (focusNode.getValue() == value) found = true;
+            searchInOrder(focusNode.getRightChild(), value);
+        }
+        return found;
     }
 
     public void preOrderTraverseTree(Node focusNode) {

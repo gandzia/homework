@@ -14,7 +14,13 @@ public class Demo {
             theTree.addNode(sc.nextInt());
         }
 
+        System.out.println("Enter number to search:");
+        r = sc.nextInt();
         sc.close();
+        if (theTree.searchInOrder(theTree.root, r))
+            System.out.println("The number was found in the tree");
+        else
+            System.out.println("The number was NOT found in the tree");
 
         System.out.println("Traversal of the tree by type In-Order:");
         theTree.inOrderTraverseTree(theTree.root);
