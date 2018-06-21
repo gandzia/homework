@@ -30,7 +30,7 @@ public class Demo {
         if (people.get(person1).getSerie().matches(passport_to_find.getSerie()) & (people.get(person1).getNumber().toString().matches(passport_to_find.getNumber().toString())))
             isFound = true;
         System.out.println(isFound);
-//я не розумію чому наступний рядок повертає false:
         System.out.println("Verification via equals(): " + (people.get(person1)).equals(passport_to_find));
+        System.out.println("Verification via hashCode(): " + ((people.get(person1)).hashCode() == passport_to_find.hashCode()));
     }
 }

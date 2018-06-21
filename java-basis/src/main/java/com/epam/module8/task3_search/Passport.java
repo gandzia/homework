@@ -1,29 +1,37 @@
 package com.epam.module8.task3_search;
 
 public class Passport {
-
-    private String serie;
-    private Integer number;
+    final String SERIE;
+    final Integer NUMBER;
 
     public Passport(String serie, Integer number) {
-
-        setSerie(serie);
-        setNumber(number);
-    }
-
-    public void setSerie(String serie) {
-        this.serie = serie;
-    }
-
-    public void setNumber(Integer number) {
-        this.number = number;
+        this.SERIE = serie;
+        this.NUMBER = number;
     }
 
     public String getSerie() {
-        return serie;
+        return SERIE;
     }
 
     public Integer getNumber() {
-        return number;
+        return NUMBER;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Passport passport = (Passport) o;
+
+        if (!SERIE.equals(passport.SERIE)) return false;
+        return NUMBER.equals(passport.NUMBER);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = SERIE.hashCode();
+        result = 31 * result + NUMBER.hashCode();
+        return result;
     }
 }

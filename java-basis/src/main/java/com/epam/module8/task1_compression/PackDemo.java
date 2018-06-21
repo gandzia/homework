@@ -16,13 +16,17 @@ public class PackDemo {
         String s3 = "Hhhhell1p"; //--> Hh3el211p
         String s4 = "He111"; //--> He13
         System.out.println("before compression: " + s1);
-        System.out.println("compressed:" + Compression.pack(s1));
+        Compression string1 = new Compression(s1);
+        System.out.println("compressed:" + string1.pack());
         System.out.println("before compression: " + s2);
-        System.out.println("compressed:" + Compression.pack(s2));
+        Compression string2 = new Compression(s2);
+        System.out.println("compressed:" + string2.pack());
         System.out.println("before compression: " + s3);
-        System.out.println("compressed:" + Compression.pack(s3));
+        Compression string3 = new Compression(s3);
+        System.out.println("compressed:" + string3.pack());
         System.out.println("before compression: " + s4);
-        System.out.println("compressed:" + Compression.pack(s4));
+        Compression string4 = new Compression(s4);
+        System.out.println("compressed:" + string4.pack());
         System.out.println();
 
         System.out.println("before unpack: " + "Hel2o451");
